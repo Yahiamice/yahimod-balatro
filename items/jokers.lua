@@ -571,6 +571,7 @@ SMODS.Joker{
     config = { extra = {active = true}},
 
     loc_vars = function(self, info_queue, center)
+        info_queue[#info_queue + 1] = G.P_CENTERS.c_black_hole
 		return { vars = { center.ability.extra.active }  }
 	end,
     active = true,
@@ -1977,6 +1978,7 @@ SMODS.Joker{
     
 
     loc_vars = function(self, info_queue, center)
+        info_queue[#info_queue + 1] = G.P_CENTERS.m_gold
 		return { vars = { center.ability.extra.mult, center.ability.extra.Xmult }  }
 	end,
 
@@ -2050,6 +2052,12 @@ SMODS.Joker{
 
     pos = {x=0, y= 0},
 
+    
+
+    loc_vars = function (self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_SEALS.yahimod_whatsapp_seal
+    end,
+
     calculate = function(self, card, context)
         if context.repetition and context.cardarea == G.play then
             if context.other_card.seal == "yahimod_whatsapp_seal" then 
@@ -2108,6 +2116,12 @@ SMODS.Joker{
     perishable_compat = false,
 
     pos = {x=0, y= 0},
+
+    
+
+    loc_vars = function (self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_SEALS.yahimod_whatsapp_seal
+    end,
 
     calculate = function(self, card, context)
     if context.selling_self then
@@ -2176,6 +2190,7 @@ SMODS.Joker{
 
     loc_vars = function(self, info_queue, center)
         info_queue[#info_queue+1] = {key = 'yahimod_artcredit', set = 'Other', vars = { "Lisnovski" }}
+        info_queue[#info_queue+1] = {key = 'e_negative_generic', set = 'Edition', config = { extra = 1 }}
 		return { vars = { center.ability.extra.oldshopsize, center.ability.extra.buffedodds }  }
 	end,
 
@@ -2587,6 +2602,10 @@ SMODS.Joker{
     perishable_compat = true,
 
     pos = {x=0, y= 0},
+    
+    loc_vars = function (self, info_queue, card)
+        info_queue[#info_queue+1] = G.P_CENTERS.e_polychrome
+    end,
 
     calculate = function(self, card, context)
         if context.retrigger_joker_check and not context.retrigger_joker and context.other_card ~= self then

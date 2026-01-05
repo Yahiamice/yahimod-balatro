@@ -396,7 +396,7 @@ SMODS.Consumable {
         -- How many cards can be selected.
         max_highlighted = 1,
         -- the key of the seal to change to
-        extra = 'whatsapp_seal',
+        extra = 'yahimod_whatsapp_seal',
     },
     loc_vars = function(self, info_queue, card)
         -- Handle creating a tooltip with seal args.
@@ -422,7 +422,7 @@ SMODS.Consumable {
                 return true end }))
             
             G.E_MANAGER:add_event(Event({trigger = 'after',delay = 0.1,func = function()
-                G.hand.highlighted[i]:set_seal("yahimod_whatsapp_seal",true,true)
+                G.hand.highlighted[i]:set_seal(card.ability.config.extra,true,true)
                 return true end }))
             
             delay(0.5)
@@ -487,7 +487,7 @@ SMODS.Consumable {
         -- How many cards can be selected.
         max_highlighted = 3,
         -- the key of the seal to change to
-        extra = 'ifunny_seal',
+        extra = 'yahimod_ifunny_seal',
     },
     loc_vars = function(self, info_queue, card)
         -- Handle creating a tooltip with seal args.
@@ -513,7 +513,7 @@ SMODS.Consumable {
                 return true end }))
             
             G.E_MANAGER:add_event(Event({trigger = 'after',delay = 0.1,func = function()
-                G.hand.highlighted[i]:set_seal("yahimod_ifunny_seal",true,true)
+                G.hand.highlighted[i]:set_seal(card.ability.config.extra,true,true)
                 return true end }))
             
             delay(0.5)
@@ -538,6 +538,7 @@ SMODS.Consumable({
     },
     config = {chance = 100},
     loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue+1] = G.P_CENTERS.j_yahimod_yahicard
         return {vars = {G.GAME.probabilities.normal, (card.ability or self.config).chance}}
     end,
 	
@@ -661,7 +662,7 @@ SMODS.Consumable {
         -- How many cards can be selected.
         max_highlighted = 1,
         -- the key of the seal to change to
-        extra = 'swapper_seal',
+        extra = 'yahimod_swapper_seal',
     },
     loc_vars = function(self, info_queue, card)
         -- Handle creating a tooltip with seal args.
@@ -686,7 +687,7 @@ SMODS.Consumable {
                 return true end }))
             
             G.E_MANAGER:add_event(Event({trigger = 'after',delay = 0.1,func = function()
-                G.hand.highlighted[i]:set_seal("yahimod_swapper_seal",true,true)
+                G.hand.highlighted[i]:set_seal(card.ability.extra,true,true)
                 return true end }))
             
             delay(0.5)
