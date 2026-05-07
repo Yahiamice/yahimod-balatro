@@ -2476,6 +2476,7 @@ SMODS.Joker{
         'Yahimodaddition', 
         'mult',
         'meta_effect',
+        'food',
     },
     
     unlocked = true,
