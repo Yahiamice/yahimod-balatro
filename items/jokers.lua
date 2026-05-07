@@ -25,6 +25,11 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'xmult',
+        'economy',
+    },
 
     unlocked = true,
     discovered = true,
@@ -90,6 +95,14 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true },
+    attributes = { 
+        'Yahimodaddition', 
+        'cat',
+        'xmult',
+        'enhancements',
+        'scaling',
+        'reset',
+    },
     
     unlocked = true,
     discovered = true,
@@ -161,6 +174,12 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition',
+        'minecraft',
+        'xmult',
+        'scaling',
+    },
     
     unlocked = true,
     discovered = true,
@@ -247,6 +266,13 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'nine',
+        'ten',
+        'rank',
+        'xmult',
+    },
     
     unlocked = true,
     discovered = true,
@@ -341,6 +367,14 @@ SMODS.Joker{
     rarity = 3,
     cost = 4,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'minecraft',
+        'xmult',
+        'jack',
+        'rank',
+        'full_deck',
+    },
     
     unlocked = true,
     discovered = true,
@@ -447,6 +481,12 @@ SMODS.Joker{
     rarity = 4,
     cost = 20,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'xmult',
+        'scaling',
+        'hands',
+    },
 
     unlocked = true,
     discovered = true,
@@ -498,6 +538,10 @@ SMODS.Joker{
     rarity = 2,
     cost = 4,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'generation',
+    },
     
     unlocked = true,
     discovered = true,
@@ -560,6 +604,15 @@ SMODS.Joker{
     rarity = 3,
     cost = 11,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'space',
+        'generation',
+        'planet',
+        'spectral',
+        'hand_type',
+        'boss_blind',
+    },
     
     unlocked = true,
     discovered = true,
@@ -628,6 +681,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 7,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'scaling',
+        'xmult',
+    },
     
     unlocked = true,
     discovered = true,
@@ -696,6 +754,13 @@ SMODS.Joker{
     rarity = 1,
     cost = 2,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'mult',
+        'generation',
+        'joker',
+        'meta_effect',
+    },
     
     unlocked = true,
     discovered = true,
@@ -746,6 +811,16 @@ SMODS.Joker{
     rarity = 2,
     cost = 7,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'mult',
+        'xmult',
+        'suit',
+        'rank',
+        'clubs',
+        'spades',
+        'king',
+    },
     
     unlocked = true,
     discovered = true,
@@ -811,6 +886,12 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true },
+    attributes = { 
+        'Yahimodaddition', 
+        'cat',
+        'mult',
+        'scaling',
+    },
     
     unlocked = true,
     discovered = true,
@@ -868,6 +949,12 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'cat',
+        'chips',
+        'scaling',
+    },
     
     unlocked = true,
     discovered = true,
@@ -925,6 +1012,12 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'minecraft',
+        'mult',
+        'hands',
+    },
     
     unlocked = true,
     discovered = true,
@@ -985,6 +1078,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 4,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        --'minecraft',
+        'boss_blind',
+    },
     
     unlocked = true,
     discovered = true,
@@ -1047,6 +1145,13 @@ SMODS.Joker{
     rarity = 3,
     cost = 10,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'chips',
+        'mult',
+        'reset',
+        'meta_effect',
+    },
 
     pixel_size = { w = 71 , h = 96 },
     frame = 0,
@@ -1104,6 +1209,13 @@ SMODS.Joker{
     rarity = 2,
     cost = 8,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'xmult',
+        'scaling',
+        'reset',
+        'chance',
+    },
     
     unlocked = true,
     discovered = true,
@@ -1177,6 +1289,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'xblindsize',
+        'meta_effect',
+    },
 
     config = { extra = {storedmusicvol = 0}},
 
@@ -1236,6 +1353,12 @@ SMODS.Joker{
     rarity = 2,
     cost = 25,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        --'minecraft',
+        'mult',
+        'chips',
+    },
     
     unlocked = true,
     discovered = true,
@@ -1304,7 +1427,12 @@ SMODS.Joker{
     rarity = 2,
     cost = 1,
     pools = {["Yahimodaddition"] = true},
-
+    attributes = { 
+        'Yahimodaddition', 
+        'horse',
+        'xmult',
+        'meta_effect',
+    },
 
     unlocked = true,
     discovered = true,
@@ -1359,6 +1487,12 @@ SMODS.Joker{
     rarity = 2,
     cost = 1,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'horse',
+        'xmult',
+        'meta_effect',
+    },
 
 
     unlocked = true,
@@ -1407,7 +1541,11 @@ SMODS.Joker{
     cost = 7,
     config = { extra = {chosenside = 1}},
     pools = {["Yahimodaddition"] = true},
-
+    attributes = { 
+        'Yahimodaddition', 
+        'copying',
+        'chance',
+    },
     
     unlocked = true,
     discovered = true,
@@ -1477,6 +1615,11 @@ SMODS.Joker{
     rarity = 1,
     cost = 3,
     pools = { ["Cat"] = true,["Yahimodaddition"] = true },
+    attributes = { 
+        'Yahimodaddition', 
+        'cat',
+        'joker_slot',
+    },
     
     unlocked = true,
     discovered = true,
@@ -1530,7 +1673,13 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'cat',
+        'chance',
+        'mult',
+        'chips',
+    },
     
     unlocked = true,
     discovered = true,
@@ -1593,7 +1742,13 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'cat',
+        'joker',
+        'meta_effect',
+        'chips',
+    },
     
     unlocked = true,
     discovered = true,
@@ -1674,6 +1829,13 @@ SMODS.Joker{
     rarity = 1,
     cost = 2,
     pools = { ["Yahimodaddition"] = true },
+    attributes = { 
+        'Yahimodaddition', 
+        'minecraft',
+        'mult',
+        'generation',
+        'meta_effect',
+    },
     
     unlocked = true,
     discovered = true,
@@ -1740,7 +1902,12 @@ SMODS.Joker{
     rarity = 1,
     cost = 2,
     pools = {["Yahimodaddition"] = true},
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'minecraft',
+        'mult',
+    },
+
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
@@ -1793,7 +1960,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 7,
     pools = {["Yahimodaddition"] = true},
-
+    attributes = { 
+        'Yahimodaddition', 
+        'retrigger',
+        'joker',
+    },
     
     unlocked = true,
     discovered = true,
@@ -1898,7 +2069,12 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true },
-
+    attributes = { 
+        'Yahimodaddition', 
+        'cat',
+        'joker',
+        'xmult',
+    },
     
     unlocked = true,
     discovered = true,
@@ -1963,6 +2139,13 @@ SMODS.Joker{
     rarity = 2,
     cost = 7,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'minecraft',
+        'enhancements',
+        'generation',
+        'hands',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2041,6 +2224,13 @@ SMODS.Joker{
     rarity = 3,
     cost = 9,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'seals',
+        'retrigger',
+        'modify_card',
+        'hands',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2100,6 +2290,13 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true },
+    attributes = { 
+        'Yahimodaddition', 
+        'cat',
+        'seals',
+        'modify_card',
+        'on_sell',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2163,6 +2360,13 @@ SMODS.Joker{
     rarity = 4,
     cost = 24,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'reroll',
+        'modify_card',
+        'scaling',
+        'editions',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2268,6 +2472,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 6,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'mult',
+        'meta_effect',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2324,7 +2533,12 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'cat',
+        'joker',
+        'mult',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2386,7 +2600,13 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'minecraft',
+        'hands',
+        'discards',
+        'mult',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2446,7 +2666,12 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'meta_effect',
+        'joker',
+        'economy',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2520,7 +2745,12 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'meta_effect',
+        'chance',
+        'mult',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2578,7 +2808,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 7,
     pools = {["Yahimodaddition"] = true},
-
+    attributes = { 
+        'Yahimodaddition', 
+        'retrigger',
+        'editions',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2631,6 +2865,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 8,
     pools = { ["Yahimodaddition"] = true },  
+    attributes = { 
+        'Yahimodaddition', 
+        'meta_effect',
+        'xmult',
+    },
     unlocked = true,
     discovered = true,
     blueprint_compat = false,
@@ -2694,7 +2933,10 @@ SMODS.Joker{
     rarity = 2,
     cost = 8,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'xmult',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2756,7 +2998,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 8,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'chips',
+        'meta_effect',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2813,7 +3059,11 @@ SMODS.Joker{
     rarity = 3,
     cost = 7,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'mult',
+        'meta_effect',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2866,7 +3116,14 @@ SMODS.Joker{
     rarity = 3,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'joker',
+        'economy',
+        'scaling',
+        'destroy_card',
+        'sell_value',
+    },
     
     unlocked = true,
     discovered = true,
@@ -2950,7 +3207,11 @@ SMODS.Joker{
     rarity = 3,
     cost = 8,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'meta_effect',
+        'boss_blind',
+    },
     
     unlocked = true,
     discovered = true,
@@ -3003,8 +3264,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 7,
     pools = {["Yahimodaddition"] = true},
-
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'chance',
+        'copying',
+    },
     
     unlocked = true,
     discovered = true,
@@ -3064,7 +3328,12 @@ SMODS.Joker{
     rarity = 2,
     cost = 7,
     pools = {["Yahimodaddition"] = true},
-
+    attributes = { 
+        'Yahimodaddition', 
+        'scaling',
+        'destroy_card',
+        'retrigger',
+    },
     
     unlocked = true,
     discovered = true,
@@ -3167,6 +3436,10 @@ SMODS.Joker{
     rarity = 2,
     cost = 7,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'copying',
+    },
 
     config = { extra = { active = "Inactive" , bptarget = 0 } },
 
@@ -3244,6 +3517,10 @@ SMODS.Joker{
     rarity = 4,
     cost = 25,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'retrigger',
+    },
 
     config = { extra = { active = "Inactive" , bptarget = 0 } },
 
@@ -3324,6 +3601,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 7,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'copying',
+        'chance',
+    },
     
     unlocked = true,
     discovered = true,
@@ -3388,7 +3670,14 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'cat',
+        'mult',
+        'scaling',
+        'joker',
+        'destroy_card',
+    },
     
     unlocked = true,
     discovered = true,
@@ -3451,7 +3740,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 7,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'hands',
+        'discards',
+    },
     
     unlocked = true,
     discovered = true,
@@ -3537,7 +3830,17 @@ SMODS.Joker{
     display_size = { w = 75, h = 75 },
     cost = 4,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'minecraft', 
+        'meta_effect',
+        'chips',
+        'mult',
+        'xmult',
+        'xchips',
+        'economy',
+        'chance',
+    },
     
     unlocked = true,
     discovered = true,
@@ -3632,6 +3935,13 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true },
+    attributes = { 
+        'Yahimodaddition', 
+        'cat',
+        'meta_effect',
+        'chips',
+        'mult',
+    },
     
     unlocked = true,
     discovered = true,
@@ -3895,7 +4205,14 @@ SMODS.Joker{
     rarity = 3,
     cost = 10,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'meta_effect',
+        'xchips',
+        'xmult',
+        'scaling',
+        'reset',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4003,9 +4320,11 @@ SMODS.Joker{
     rarity = 1,
     cost = 3,
     pools = {["Yahimodaddition"] = true},
-
-
-    
+    attributes = { 
+        'Yahimodaddition', 
+        'chance',
+        'economy',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4051,6 +4370,12 @@ SMODS.Joker{
     rarity = 1,
     cost = 3,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition', 
+        'meta_effect',
+        'mult',
+        'scaling',
+    },
     config = { extra = {mult = 833}},
 
     loc_vars = function(self, info_queue, center)
@@ -4124,6 +4449,12 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
+    attributes = { 
+        'Yahimodaddition', 
+        'minecraft',
+        'joker_slot',
+        'generation',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4196,6 +4527,10 @@ SMODS.Joker{
     rarity = 2,
     cost = 4,
     pools = { ["Yahimodaddition"] = true },
+    attributes = { 
+        'Yahimodaddition', 
+        'meta_effect',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4257,6 +4592,12 @@ SMODS.Joker{
     rarity = 1,
     cost = 3,
     pools = { ["Cat"] = true , ["Yahimodaddition"] = true },
+    attributes = { 
+        'Yahimodaddition',
+        'cat', 
+        'hands',
+        'discards',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4356,7 +4697,13 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'cat', 
+        'mult',
+        'scaling',
+        'hand_type'
+    },
     
     unlocked = true,
     discovered = true,
@@ -4431,7 +4778,11 @@ SMODS.Joker{
     rarity = 1,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'chips',
+        'hand_type'
+    },
     
     unlocked = true,
     discovered = true,
@@ -4497,7 +4848,12 @@ SMODS.Joker{
     rarity = 3,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'retrigger',
+        'economy',
+        'scaling',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4567,7 +4923,12 @@ SMODS.Joker{
     rarity = 1,
     cost = 2,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'chips',
+        'mult',
+        'chance',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4626,7 +4987,11 @@ SMODS.Joker{
     rarity = 1,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'minecraft',
+        'xmult',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4695,7 +5060,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 8,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'economy',
+        'hands',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4743,7 +5112,11 @@ SMODS.Joker{
     rarity = 1,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'economy',
+        'skip',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4795,7 +5168,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'xmult',
+        'joker_slot',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4848,7 +5225,11 @@ SMODS.Joker{
     rarity = 1,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'xmult',
+        'meta_effect',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4900,7 +5281,11 @@ SMODS.Joker{
     rarity = 3,
     cost = 4,
     pools = { ["Yahimodaddition"] = true },
-    
+        attributes = { 
+        'Yahimodaddition',
+        'xmult',
+        'meta_effect',
+    },
     
     unlocked = true,
     discovered = true,
@@ -4963,7 +5348,13 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'hand_type',
+        'mult',
+        'scaling',
+        'meta_effect',
+    },
     
     unlocked = true,
     discovered = true,
@@ -5026,7 +5417,12 @@ SMODS.Joker{
     rarity = 3,
     cost = 10,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'enhancements',
+        'seals',
+        'xmult',
+    },
     
     unlocked = true,
     discovered = true,
@@ -5082,6 +5478,13 @@ SMODS.Joker{
     rarity = 1,
     cost = 3,
     pools = {["Yahimodaddition"] = true},
+    attributes = { 
+        'Yahimodaddition',
+        'minecraft',
+        'economy',
+        'scaling',
+        'food',
+    },
     
     unlocked = true,
     discovered = true,
@@ -5145,7 +5548,12 @@ SMODS.Joker{
     rarity = 1,
     cost = 5,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'hand_type',
+        'mult',
+        'scaling',
+    },
     
     unlocked = true,
     discovered = true,
@@ -5205,7 +5613,11 @@ SMODS.Joker{
     rarity = 2,
     cost = 5,
     pools = { ["Cat"] = true, ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'cat',
+        'modify_card',
+    },
     
     unlocked = true,
     discovered = true,
@@ -5261,7 +5673,9 @@ SMODS.Joker{
     rarity = 1,
     cost = 6,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+    },
     
     unlocked = true,
     discovered = true,
@@ -5320,7 +5734,12 @@ SMODS.Joker{
     rarity = 3,
     cost = 10,
     pools = { ["Yahimodaddition"] = true },
-    
+    attributes = { 
+        'Yahimodaddition',
+        'meta_effect',
+        'xmult',
+        'scaling',
+    },
     
     unlocked = true,
     discovered = true,
