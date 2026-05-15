@@ -302,6 +302,8 @@ SMODS.Consumable({
 	end,
 })
 
+
+
 -- yahiworld
 
 SMODS.Consumable({
@@ -694,6 +696,60 @@ SMODS.Consumable {
         G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.2,func = function() G.hand:unhighlight_all(); return true end }))
     end
 }
+
+SMODS.Sound({key = "splat", path = "splat.ogg",})
+
+SMODS.Atlas{
+    key = 'atlas_consumeable_sole',
+    path = 'solecard.png',
+    px = 63,
+    py = 93,
+}
+
+-- Sole
+
+SMODS.Consumable({
+    key = "yahimod_solecard",
+    set = "Spectral",
+    object_type = "Consumable",
+    name = "solecard",
+    loc_txt = {
+        name = "Sole",
+        text={
+        "foot",
+        },
+    },
+	
+	
+	pos = {x=0, y= 0},
+    soul_pos = { x = 0, y = 1 },
+	order = 99,
+	atlas = "atlas_consumeable_sole",
+    unlocked = true,
+    cost = 4,
+
+    use = function(self, card, area, copier)
+        local card = create_card('Joker', G.Jokers, nil, nil, nil, nil, 'j_yahimod_foot', 'sole')
+        card:add_to_deck()
+        G.jokers:emplace(card)
+        play_sound("yahimod_splat")
+    end,
+
+    can_use = function(self, card)
+        if #G.jokers.cards < G.jokers.config.card_limit then
+            return true
+        end
+	end,
+
+	check_for_unlock = function(self, args)
+		if args.type == "win_deck" then
+            unlock_card(self)
+        else
+			unlock_card(self)
+		end
+	end,
+})
+
 
 -- reset open to lan on run restart (and other variables)
 local _startrunhook = Game.start_run

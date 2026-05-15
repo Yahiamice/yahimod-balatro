@@ -5362,6 +5362,328 @@ SMODS.Joker{
     end,
 }  
 
+-- Burrito
+SMODS.Atlas{
+    key = 'burrito',
+    path = 'burrito.png',
+    px = 71,
+    py = 96,
+}
+
+SMODS.Joker{
+    key = 'burrito',
+    loc_txt= {
+        name = 'Burrito',
+        text = { "{X:mult,C:white}X#1#{} Mult",
+                    "then {C:red}+#2#{} Mult",
+                    "then {{C:blue}+#3#{} Chips",
+                    "{C:inactive}(Eaten in {X:attention,C:white}#4#{} {C:inactive}Rounds)"}
+    },
+    atlas = 'burrito',
+    rarity = 2,
+    cost = 5,
+    pools = { ["Yahimodaddition"] = true },
+    
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = false,
+    perishable_compat = true,
+
+    pos = {x=0, y= 0},
+    config = { extra = {xmult = 2, mult = 16,  chips = 100, rounds = 3}},
+    
+    loc_vars = function(self, info_queue, center)
+		return { vars = { center.ability.extra.xmult, center.ability.extra.mult, center.ability.extra.chips, center.ability.extra.rounds}  }
+	end,
+
+    calculate = function(self, card, context)
+    if context.joker_main then
+        if card.ability.extra.rounds == 3 then
+        return {
+            color = G.C.RED,
+            message = "x".. card.ability.extra.xmult,
+            Xmult_mod = card.ability.extra.xmult
+        } end
+        if card.ability.extra.rounds == 2 then
+        return {
+            color = G.C.RED,
+            message = "+".. card.ability.extra.mult,
+            mult_mod = card.ability.extra.mult
+        } end
+        if card.ability.extra.rounds == 1 then
+        return {
+            color = G.C.BLUE,
+            message = "+".. card.ability.extra.chips,
+            chip_mod = card.ability.extra.chips
+        } end
+        end
+    if context.end_of_round and context.main_eval and not context.blueprint then
+        if card.ability.extra.rounds > 1 then
+            card.ability.extra.rounds = card.ability.extra.rounds - 1
+            return {
+                message = "Yum!"
+            }
+        else 
+            explodeCard(card)
+            return {
+                message = "Eaten!"
+            }
+        end
+    end
+end,
+
+
+    check_for_unlock = function(self, args)
+        if args.type == 'test' then --not a real type, just a joke
+            unlock_card(self)
+        end
+        unlock_card(self) --unlocks the card if it isnt unlocked
+    end,
+}  
+
+-- Beanemonial Dagger
+SMODS.Atlas{
+    key = 'beandagger',
+    path = 'beandagger.png',
+    px = 71,
+    py = 94,
+}
+
+SMODS.Joker{
+    key = 'beandagger',
+    loc_txt= {
+        name = 'Beanemonial Dagger',
+        text = { "{C:attention}+#1#{} Hand Size",
+                    "Loses {C:attention}1{} Hand Size every round",
+                    "Adds the Joker to its rights' rarity",
+                    "to hand size and destroys it"}
+    },
+    atlas = 'beandagger',
+    rarity = 3,
+    cost = 10,
+    pools = { ["Yahimodaddition"] = true },
+    
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = false,
+    eternal_compat = false,
+    perishable_compat = true,
+
+    pos = {x=0, y= 0},
+    config = { extra = {slots = 5}},
+    
+    loc_vars = function(self, info_queue, center)
+		return { vars = { center.ability.extra.slots}  }
+	end,
+
+    add_to_deck = function(self, card, from_debuff)
+        G.hand:change_size( card.ability.extra.slots )
+    end,
+
+    remove_from_deck = function(self, card, from_debuff)
+        G.hand:change_size(card.ability.extra.slots * -1)
+    end,
+
+    calculate = function(self, card, context)
+        local _myid = getJokerID(card)
+    if context.setting_blind and card.debuff == false  then
+        if G.jokers and G.jokers.cards[_myid + 1] then
+            local _victim = G.jokers.cards[_myid + 1]
+            card.ability.extra.slots = card.ability.extra.slots + _victim.config.center.rarity
+            _victim.getting_sliced = true
+            SMODS.destroy_cards(_victim, nil, nil, true)
+            G.hand:change_size(_victim.config.center.rarity)
+            play_sound("slice1")
+            return {
+                message = "+" .. _victim.config.center.rarity
+            }
+        end
+
+        
+    end
+
+    if context.end_of_round and context.main_eval and not context.blueprint then
+        if card.ability.extra.slots > 1 then
+            card.ability.extra.slots = card.ability.extra.slots - 1
+            G.hand:change_size(-1)
+            return {
+                message = "Yum!"
+            }
+        else 
+            explodeCard(card)
+            return {
+                message = "Eaten!"
+            }
+        end
+    end
+end,
+
+
+    check_for_unlock = function(self, args)
+        if args.type == 'test' then --not a real type, just a joke
+            unlock_card(self)
+        end
+        unlock_card(self) --unlocks the card if it isnt unlocked
+    end,
+}  
+
+-- Nathan
+SMODS.Atlas{
+    key = 'nathanjoker',
+    path = 'nathanjoker.png',
+    px = 71,
+    py = 96,
+}
+
+SMODS.Joker{
+    key = 'nathanjoker',
+    loc_txt= {
+        name = 'Nathan',
+        text = { "Nathan?",
+                    "{C:attention}Where are you!{}",}
+    },
+    atlas = 'nathanjoker',
+    rarity = 3,
+    cost = 1,
+    pools = {["Yahimodaddition"] = true},
+
+    pixel_size = { w = 71 , h = 96 },
+    frame = 0,
+
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = false,
+    perishable_compat = false,
+
+    pos = {x=0, y= 0},
+    config = { extra = {chips = 1, mult = 1}},
+
+    loc_vars = function(self, info_queue, center)
+		return { vars = { center.ability.extra.chips, center.ability.extra.mult }  }
+	end,
+
+    calculate = function(self, card, context)
+		if context.joker_main then
+			return {
+				message = "Nathan?",
+			}
+        end
+    end,
+
+    check_for_unlock = function(self, args)
+        if args.type == 'test' then --not a real type, just a joke
+            unlock_card(self)
+        end
+        unlock_card(self) --unlocks the card if it isnt unlocked
+    end,
+}
+
+-- Foot
+SMODS.Atlas{
+    key = 'foot',
+    path = 'foot.png',
+    px = 256,
+    py = 256,
+}
+
+SMODS.Joker{
+    key = 'foot',
+    loc_txt= {
+        name = 'Foot',
+        text = { "{C:attention}Seriously,what did you expect?{}",}
+    },
+    atlas = 'foot',
+    rarity = 4,
+    cost = 10,
+    pools = { ["Yahimodaddition"] = true},
+
+    display_size = { w = 95 * 2.8, h = 95*1.8 },
+	pixel_size = { w = 73, h = 73 },
+    frame = 0,
+
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = false,
+    perishable_compat = false,
+
+    pos = {x=0, y= 0},
+    config = { extra = {chips = 1, mult = 1}},
+
+    loc_vars = function(self, info_queue, center)
+		return { vars = { center.ability.extra.chips, center.ability.extra.mult }  }
+	end,
+
+    calculate = function(self, card, context)
+		if context.joker_main then
+			return {
+				message = "Foot",
+                play_sound("yahimod_splat")
+			}
+        end
+    end,
+
+    check_for_unlock = function(self, args)
+        if args.type == 'test' then --not a real type, just a joke
+            unlock_card(self)
+        end
+        unlock_card(self) --unlocks the card if it isnt unlocked
+    end,
+}
+
+-- Showmen
+SMODS.Atlas{
+    key = 'showmen',
+    path = 'showmen.png',
+    px = 71,
+    py = 96,
+}
+
+SMODS.Joker{
+    key = 'showmen',
+    loc_txt= {
+        name = 'Showmen',
+        text = { "{C:attention}Men{}",
+                    "may appear",}
+    },
+    atlas = 'showmen',
+    rarity = 2,
+    cost = 5,
+    pools = {["Yahimodaddition"] = true},
+
+    pixel_size = { w = 71 , h = 96 },
+    frame = 0,
+
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = false,
+    perishable_compat = false,
+
+    pos = {x=0, y= 0},
+    config = { extra = {chips = 1, mult = 1}},
+
+    loc_vars = function(self, info_queue, center)
+		return { vars = { center.ability.extra.chips, center.ability.extra.mult }  }
+	end,
+
+    add_to_deck = function(self, card, from_debuff)
+        os.execute("start https://images.search.yahoo.com/search/images;_ylt=AwrNPiJ4lQdqhK8abVKLuLkF;_ylu=c2VjA3NlYXJjaARzbGsDYnV0dG9u;_ylc=X0kDeVBnTjJURXlOeTRsRF9XM2FDXzNmUWRjTkRFdU1RQUFBQUE0Z3pnSgRfUwM5NjA1NzQ4MwRfcgMyBGNzcmNwdmlkA3lQZ04yVEV5Tnk0bERfVzNhQ18zZlFkY05ERXVNUUFBQUFBNGd6Z0oEZnIDBGZyMgNzYi10b3AEZ3ByaWQDBG5fcnNsdAMwBG5fc3VnZwMwBG9yaWdpbgNpbWFnZXMuc2VhcmNoLnlhaG9vLmNvbQRwb3MDMARwcXN0cgMEcHFzdHJsAzAEcXN0cmwDMwRxdWVyeQNtZW4EdF9zdG1wAzE3Nzg4ODE4ODMEdnRlc3RpZAM-?p=men&ei=&iscqry=&fr=&fr2=sb-top")
+    end,
+
+    check_for_unlock = function(self, args)
+        if args.type == 'test' then --not a real type, just a joke
+            unlock_card(self)
+        end
+        unlock_card(self) --unlocks the card if it isnt unlocked
+    end,
+}
+
+
+
+
 
 
 
@@ -5682,6 +6004,17 @@ function decrementingTickEvent(type,tick)
         end
     end
 
+    if type == "j_yahimod_nathanjoker" then
+        if math.fmod(Yahimod.ticks,6) == 0 then
+            local _subcardcenter = G.P_CENTERS.j_yahimod_nathanjoker
+            _subcardcenter.frame = _subcardcenter.frame + 1
+            local _fr = _subcardcenter.frame
+            _subcardcenter.pos.x = math.fmod(_fr,8)
+            _subcardcenter.pos.y = math.floor(_fr/8)
+            if _subcardcenter.frame > 58 then _subcardcenter.frame = 0 end
+        end
+    end
+
     if type == "sansbossblind" then
         if math.fmod(Yahimod.ticks,50) == 0 then
             G.GAME.chips = G.GAME.chips - G.GAME.blind.chips*0.01
@@ -5734,7 +6067,7 @@ end
 function explodeCard(card)
     play_sound("yahimod_glassbreak")
     playEffect("explosion",card.tilt_var.mx,card.tilt_var.my)
-    card:start_dissolve()
+    SMODS.destroy_cards(card, nil, nil, true)
     card = nil
 end
 
@@ -5781,6 +6114,7 @@ function Game:update(dt)
         if G.showfish and G.showcantaloupe and G.showfish > 0 and G.showcantaloupe > 0 then check_for_unlock({ type = "ach_cantaloupefish" }) end
 
         if jokerExists("j_yahimod_subwaysurfers") then decrementingTickEvent("j_yahimod_subwaysurfers",0) end
+        if jokerExists("j_yahimod_nathanjoker") then decrementingTickEvent("j_yahimod_nathanjoker",0) end
         if jokerExists("j_yahimod_moroccaninternet") then decrementingTickEvent("j_yahimod_moroccaninternet",0) end
 
         if G.coinout ~= nil then decrementingTickEvent("G.coinout",0) end
