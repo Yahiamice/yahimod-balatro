@@ -7,6 +7,27 @@
 ----------------------------------------------------------
 ----------- MOD CODE -------------------------------------
 
+-- get name of joker
+function getJokerName(card)
+	if not card then return end
+	local exists = pcall(function()
+		if G.localization.descriptions['Joker'][card.config.center.key] then return true end
+	end)
+	if not exists then return end
+	return localize{type = 'name_text', set = 'Joker', key = card.config.center.key}
+end
+
+-- get id of joker
+function getJokerID(card)
+    if G.jokers then
+        local _selfid = 0
+        for i = 1, #G.jokers.cards do
+            if G.jokers.cards[i] == card then _selfid = i end
+        end
+        return _selfid
+    end
+end
+
 SMODS.Atlas{
     key = 'Jokers',
     path = 'Jokers.png',
@@ -1615,11 +1636,13 @@ SMODS.Joker{
                 if G.jokers.cards[i] == card then _selfid = i end
             end
             if _selfid and G.jokers.cards[_selfid+1] then
-                local _cname = G.jokers.cards[_selfid+1].config.center.name
-                if string.find(_cname,"j_") then _cname = G.jokers.cards[_selfid+1].config.center.loc_txt.name end
-
-                _, nvow = string.gsub(_cname, "[AEIOUaeiou]", "")
-                card.ability.extra.chiptotal = nvow * card.ability.extra.chipamt
+                local _cname = getJokerName(G.jokers.cards[_selfid+1])
+                if type(_cname) == 'string' then
+					_, nvow = string.gsub(_cname, "[AEIOUaeiou]", "")
+					card.ability.extra.chiptotal = nvow * card.ability.extra.chipamt
+				else
+					card.ability.extra.chiptotal = 0
+				end
             else
                 card.ability.extra.chiptotal = 0
             end
@@ -2466,18 +2489,16 @@ SMODS.Joker{
         if G.jokers and G.jokers.cards then
             _streak = true
             for i = 1, #G.jokers.cards do
-            if G.jokers.cards[i+1] then
-            local _cardname = G.jokers.cards[i].config.center.name
-            if string.find(_cardname,"j_") and G.jokers.cards[i].config.center.loc_txt then _cardname = G.jokers.cards[i].config.center.loc_txt.name end
-            local _cardnamenext = G.jokers.cards[i+1].config.center.name
-            if string.find(_cardnamenext,"j_") and G.jokers.cards[i+1].config.center.loc_txt then _cardnamenext = G.jokers.cards[i+1].config.center.loc_txt.name end
-            if _cardnamenext and G.jokers.cards[i+1] then
-                if string.len(_cardnamenext) < string.len(_cardname) then _streak = false end
-                end
-            end
-        end
-    end
-    if _streak == false then card.ability.extra.active = "Inactive" else card.ability.extra.active = "Active!" end
+				if G.jokers.cards[i+1] then
+					local _cardname = getJokerName(G.jokers.cards[i])
+					local _cardnamenext = getJokerName(G.jokers.cards[i+1])
+					if type(_cardname) == 'string' and type(_cardnamenext) == 'string' and G.jokers.cards[i+1] then
+						if string.len(_cardnamenext) < string.len(_cardname) then _streak = false end
+					end
+				end
+			end
+		end
+		if _streak == false then card.ability.extra.active = "Inactive" else card.ability.extra.active = "Active!" end
     end,
 
     calculate = function(self, card, context)
@@ -6070,26 +6091,6 @@ function explodeCard(card)
     SMODS.destroy_cards(card, nil, nil, true)
     card = nil
 end
-
--- get name of joker
-function getJokerName(card)
-    local _cardname = card.config.center.name
-    if string.find(_cardname,"j_") then _cardname = card.config.center.loc_txt.name end
-    return _cardname
-end
-
--- get id of joker
-function getJokerID(card)
-    if G.jokers then
-        local _selfid = 0
-        for i = 1, #G.jokers.cards do
-            if G.jokers.cards[i] == card then _selfid = i end
-        end
-        return _selfid
-    end
-end
-
-
 
 local upd = Game.update
 function Game:update(dt)
