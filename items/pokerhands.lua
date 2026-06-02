@@ -86,7 +86,7 @@ SMODS.Consumable({
     hidden = true,
 
     use = function(self, card, area, copier)
-        SMODS.smart_level_up_hand(card, "yahimod_pkr_jerma")
+        SMODS.upgrade_poker_hands({from = card, hands = {"yahimod_pkr_jerma"}})
         play_sound("yahimod_jermanoise")
     end,
 
