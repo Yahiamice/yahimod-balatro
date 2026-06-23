@@ -12,7 +12,7 @@ SMODS.Back({
         text={
         "{C:green}1 in 6{} chance",
         "to start with an",
-        "{C:attention}Open To Lan{}",
+        "{C:attention,T:c_yahimod_opentolan}Open To Lan{}",
         },
     },
 	
@@ -58,8 +58,8 @@ SMODS.Back({
         name = "Google Play",
         text={
         "Start with a",
-        "{C:green}Dr. Whatsapp{} and 2",
-        "{C:attention}Hispanic Family Gatherings",
+        "{C:green,T:j_yahimod_drwhatsapp}Dr. Whatsapp{} and 2",
+        "{C:attention,T:c_yahimod_hispanicgathering}Hispanic Family Gatherings",
         },
     },
 	
