@@ -6449,13 +6449,10 @@ function love.draw()
     if G.showlaughingcat and (G.showlaughingcat > 0) then
         --love.graphics.print("ticks:" .. Yahimod.ticks, 500, 35)
         if G.showlaughingcat < (547) then
+            if (G.showlaughingcat < 545 and G.showlaughingcat >540) then G.FUNCS.exit_overlay_menu() end
             if Yahimod.catlaughingpng == nil then Yahimod.catlaughingpng = loadThatFuckingImage("catlaughing.png") end
             love.graphics.setColor(1, 1, 1, 1) 
-            love.graphics.draw(Yahimod.catlaughingpng, 0*_xscale*2, 0*_yscale*2,0,_xscale*2*2,_yscale*2*2)
-        else
-            if Yahimod.youwinpng == nil then Yahimod.youwinpng = loadThatFuckingImage("youwin.png") end
-            love.graphics.setColor(1, 1, 1, 1) 
-            love.graphics.draw(Yahimod.youwinpng, 875*_xscale*2/2, 90*_xscale*2/2,0,_xscale*2/2,_yscale*2/2)
+            love.graphics.draw(Yahimod.catlaughingpng, 0*_xscale*2, 0*_yscale*2,0,_xscale*2*2,_yscale*2*2) 
         end
     end
 

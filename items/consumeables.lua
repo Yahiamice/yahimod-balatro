@@ -375,6 +375,15 @@ SMODS.Consumable({
     use = function(self, card, area, copier)
         G.showlaughingcat = 990
         play_sound("win")
+        G.FUNCS.overlay_menu{
+                definition = create_UIBox_win(),
+                config = {no_esc = true}
+        }
+        if G.GAME.fooledbywincard then
+            G.GAME.fooledbywincard = G.GAME.fooledbywincard +1
+        else
+            G.GAME.fooledbywincard = 1
+        end
     end,
 
     can_use = function(self, card)

@@ -42,7 +42,7 @@ SMODS.Sticker({
 
     should_apply = function(self, card, center, area)
         if (pseudorandom('badges') < 0.8) or (not G.GAME.modifiers.yahimod_spawn_madeinmorocco == true) then
-            return
+            return false
         end
         return (area == G.shop_jokers) or (area == G.pack_cards)
     end,
